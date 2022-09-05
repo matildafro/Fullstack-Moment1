@@ -1,0 +1,167 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="css/main.css">
+    <title>Tailwind</title>
+</head>
+<body>
+    <div class="relative min-h-screen md:flex">
+
+        <div class="bg-gray-800 text-gray-100 flex justify-between md:hidden">
+
+            <a href="tailwind.html" class="block p-4 text-white font-bold">Moment 1</a>
+
+            <!--knapp till mobilmeny-->
+            <button class="mobile-menu-button p-4 focus:outline-none focus:bg-gray-700">
+                <svg class="h-5 w-5" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor">
+                    <path stroke-linecap="round" stroke-linejoin="round" d="M3.75 5.25h16.5m-16.5 4.5h16.5m-16.5 4.5h16.5m-16.5 4.5h16.5" />
+                  </svg>
+                  
+            </button>
+
+        </div>
+
+        <!--sidebar med klasser för att kunna få en mobil-meny, translate-x-full gör att den gömmer sig -->
+        <div class="sidebar bg-gray-800 text-blue-100 w-64 space-y-6 px-2 py-7 absolute inset-y-0 left-0 transform -translate-x-full md:relative md:translate-x-0 transition duration-200 ease-in-out">
+            <a href="tailwind.html" class="text-2xl font-bold px-4">Moment 1</a>
+            <nav>
+                <a href="index.html" class="block py-2.5 px-4 rounded transition duration-200 hover:bg-blue-700">Start</a>
+                <a href="bootstrap.html" class="block py-2.5 px-4 rounded transition duration-200 hover:bg-blue-700">Bootstrap</a>
+                <a href="tailwind.html" class="block py-2.5 px-4 rounded transition duration-200 hover:bg-blue-700">Tailwind</a>
+                <a href="pub.html" class="block py-2.5 px-4 rounded transition duration-200 hover:bg-blue-700">Publicering</a>
+            </nav>
+        </div>
+
+        <!--content-->
+        <div class="flex-1 p-10 bg-gray-200">
+            <div class="bg-white rounded p-3">
+            <h1 class="text-3xl font-bold">Tailwind</h1>
+            <p class="py-3">Tailwind CSS är ett CSS-ramverk med öppen källkod. 
+                Skillnaden med detta ramverk är att det till skillnad från andra CSS-ramverk så som Bootstrap, 
+                inte tillhandahåller en serie fördefinierade designer för element som knappar eller tabeller. 
+                Istället har Tailwind den en lista med "hjälpmedels"-CSS-klasser som kan användas för att styla varje element.
+                <br>
+                Till exempel, i andra traditionella system, 
+                skulle det finnas en klassmeddelandevarning som skulle tillämpa en grön
+                bakgrundsfärg och fet text. För att uppnå detta resultat i 
+                Tailwind måste du använda en uppsättning 
+                klasser skapade av biblioteket: bg-green-200 och font-bold. 
+                <br>
+                Tailwind har blivit mycket populärt senaste åren, speciellt i kombination med JavaScript-ramverken så som React och Vue.js. 
+                Tailwind kan även kompileras för att endast spara kod över de klasser man använder sig av. <a href="https://tailwindcss.com/" class="font-bold text-gray-700">Länk till webbplatsen.</a></p>
+            </div>
+            <div class="flex">
+
+                <div class="flex-col p-3 my-3 mr-3 bg-white rounded"><h2 class="font-bold text-2xl">Fördelar</h2>
+                <p>Efter att ha testat mig att använda av Tailwind tycker jag att det upplevs ganska lätt att lära sig.
+                    Även fast jag förstår att det finns tusentals olika funktioner att lära sig, får man snabbt in hur man använder sig av klasserna.
+                    <br><br>
+                    Det är också väldigt lätt att jobba med färgerna. Här på denna sida har jag använt mig av samma färg överallt, men endast ändrat på färgens ljus/mörker med hjälp av färgkodens mått.
+                </p></div>
+                
+
+                <div class="flex-col p-3 my-3 mx-3 bg-white rounded"><h2 class="font-bold text-2xl">Nackdelar</h2>
+                <p>Jag upplever att det krävs väldigt mycket kod men framförallt väldigt mycket upprepning i Tailwind. Även fast ramverket
+                    hjälper till att skriva klasser (har även använt mig av pluginet Tailwind CSS IntelliSense) så tycker jag
+                    faktiskt det hade varit lättare att bygga en klass i en CSS-fil som jag sedan anropar.
+                    <br><br>
+                    Nu när jag byggde en tabell behövde jag lägga en lång klass på varje tr, istället för att ha skapat
+                    regler över alla tr som jag inte ens hade behövt anropa.
+                </p>
+                </div>
+            </div>
+
+            <div class="sd:flex-1 md:flex lg:flex">
+
+                <div class="flex-col p-3 mt-3 mr-3 bg-white rounded">
+                    <h3 class="text-2xl font-bold pb-2">Kurser jag läst:</h3>
+                    <table class="table-fixed p-2">
+                        <thead>
+                          <tr class="border-solid border-b-2 border-gray-800">
+                            <th>Kurskod</th>
+                            <th>Kursnamn</th>
+                            <th>Progression</th>
+                            <th>Kursplan</th>
+                          </tr>
+                        </thead>
+                        <tbody>
+                          <tr class="border-solid border-b-2 border-gray-500">
+                            <th>DT057G</th>
+                            <td>Webbutveckling I</td>
+                            <td>A</td>
+                            <td><a href="https://www.miun.se/utbildning/kursplaner-och-utbildningsplaner/Sok-kursplan/kursplan/?kursplanid=22782" target="_blank">Länk</a></td>
+                          </tr>
+                          <tr class="border-solid border-b-2 border-gray-500">
+                            <th>DT084G</th>
+                            <td>Introduktion till programmering i JavaScript</td>
+                            <td>A</td>
+                            <td><a href="https://www.miun.se/utbildning/kursplaner-och-utbildningsplaner/Sok-kursplan/kursplan/?kursplanid=30811" target="_blank">Länk</a></td>
+                          </tr>
+                          <tr class="border-solid border-b-2 border-gray-500">
+                            <th>DT200G</th>
+                            <td>Grafisk teknik för webb</td>
+                            <td>A</td>
+                            <td><a href="https://www.miun.se/utbildning/kursplaner-och-utbildningsplaner/Sok-kursplan/kursplan/?kursplanid=31500" target="_blank">Länk</a></td>
+                          </tr>
+                          <tr class="border-solid border-b-2 border-gray-500">
+                            <th>DT068G</th>
+                            <td>Webbanvändbarhet</td>
+                            <td>B</td>
+                            <td><a href="https://www.miun.se/utbildning/kursplaner-och-utbildningsplaner/Sok-kursplan/kursplan/?kursplanid=30823" target="_blank">Länk</a></td>
+                          </tr>
+                          <tr class="border-solid border-b-2 border-gray-500">
+                            <th>DT003G</th>
+                            <td>Databaser</td>
+                            <td>A</td>
+                            <td><a href="https://www.miun.se/utbildning/kursplaner-och-utbildningsplaner/Sok-kursplan/kursplan/?kursplanid=21595" target="_blank">Länk</a></td>
+                          </tr>
+                          <tr class="border-solid border-b-2 border-gray-500">
+                            <th>DT093G</th>
+                            <td>Webbutveckling II</td>
+                            <td>B</td>
+                            <td><a href="https://www.miun.se/utbildning/kursplaner-och-utbildningsplaner/Sok-kursplan/kursplan/?kursplanid=27133" target="_blank">Länk</a></td>
+                          </tr>
+                        </tbody>
+                      </table>
+                </div>
+
+                <div class="flex-col p-3 mt-3 mx-3 bg-white rounded">
+                    <h3 class="text-2xl font-bold pb-2">Lägg till kurs:</h3>
+                    <form>
+                        <label for="kurskod" class="font-bold">Kurskod:</label>
+                        <div class="border-solid border-b-2 border-gray-400">
+                        <input type="text" id="kurskod" placeholder="Exempel: DT003G"></div>
+                        
+                        <label for="kursnamn" class="font-bold">Kursnamn:</label>
+                        <div class="border-solid border-b-2 border-gray-400">
+                        <input type="text" id="kursnamn"></div>
+
+                        <label for="progression" class="font-bold">Progression:</label>
+                        <div class="border-solid border-b-2 border-gray-400">
+                        <input type="text" id="progression"></div>
+
+                        <label for="kursplan" class="font-bold">Kursplan:</label>
+                        <div class="border-solid border-b-2 border-gray-400">
+                        <input type="text" id="kursplan"></div>
+                        
+                        <div class="bg-gray-900 text-white p-2 cursor-pointer m-3">
+                        <input type="submit" value="Lägg till kurs"></div>
+                    
+                    </form>
+
+                </div></div></div></div>
+
+                </div>
+            </div>
+        </div>
+
+
+
+
+    </div>
+    <script src="main.js"></script>
+</body>
+</html>
