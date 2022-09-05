@@ -20,6 +20,10 @@ h1, h3 {
     text-align: center;
 }
 
+li {
+    font-weight: bold;
+}
+
 /* NAVIGATION */
 .topnav {
     overflow: hidden;
@@ -52,6 +56,11 @@ h1, h3 {
 
   .icon {
     color: white;
+  }
+
+  #active {
+    background-color: white;
+    color: black;
   }
   
   @media screen and (max-width: 600px) {
